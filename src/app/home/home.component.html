@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container color-dark">
+        <div class="col">
+            <p>Add Bucket List Item</p>
+        </div>
+        <div class="col">
+            <p>Your Bucket List ({{itemCount}})</p>
+        </div>
+    </div>
+    <div class="container color-light" [@goals]="goals.length">
+        <div class="col">
+            <p class="sm">Use This form to fill your all wanted values.</p>
+            <form action="" class="form">
+                <input type="text" class="txt" name="txtval" placeholder="enter your items" [(ngModel)]='goalText'>
+                <input type="submit" class="btn" value="Submit" (click)='addItem()'>
+            </form>
+        </div>
+        <div class="col">
+            <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
+                {{goal}}
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

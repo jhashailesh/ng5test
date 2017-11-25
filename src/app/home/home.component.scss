@@ -1,0 +1,44 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+.col {
+    padding: .4em 1.3em;
+}
+
+.color-dark {
+    background: #2E112D;
+}
+
+.color-light {
+    background: #820333;
+}
+
+input.txt {
+    border: 0;
+    padding: 1em;
+    width: 80%;
+    margin-bottom: 2em;
+}
+
+input.btn {
+    background: #2E112D;
+    color: #ffffff;
+    padding: 1em 3em;
+    margin-bottom: 3em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    &:hover {
+        background: #C9283E;
+    }
+}
+
+.life-container {
+    width: 80%;
+    background: #F0433A;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+}
